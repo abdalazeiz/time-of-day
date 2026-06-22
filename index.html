@@ -63,23 +63,25 @@
            the background color using document.querySelector('html') 
         */
 
-        myDate = new Date();
-        myHour = myDate.getHours();
-        myDay = myDate.getDay();
-        mySentence = "";
-        myColor = "";
-        dayName = "";
+        let myDate = new Date();
+        let myHour = myDate.getHours();
+        let myDay = myDate.getDay();
+        let mySentence = "";
+        let myColor = "";
+        let myPic = "";
         
 
         if(myHour >= 12){
         //alert("its  after noon");
         mySentence = "It's after noon";
         myColor = "blue";
+        myPic = "afternoon.jpg";
         }
         else{
         // alert("its not  after noon");
         mySentence = "It's not after noon";
         myColor = "purple";
+        myPic = "night.jpg";
         }
 
         if (myDay == 0) {
@@ -98,11 +100,13 @@
         }else {
             dayName = "Saturday";
         }
-        document.getElementById("day-text").innerHTML = dayName;
-
+        
+      //  document.getElementById("day-text").innerHTML = dayName;//
+          //adds sentence to the page
         document.getElementById("time-text").innerHTML = mySentence;
-       // document.body.style.backroundColor = myColor;
+        // adds color to html
             document.querySelector('html').style.backgroundColor = myColor;
+            document.getElementById("time-pic").src = myPic;
 
         // Fixes HTML/CSS Checker links
         document.addEventListener("DOMContentLoaded", function() {
