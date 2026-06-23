@@ -82,9 +82,9 @@
         let mySentence = "";
         let myColor = "";
         let myPic = "";
+        let dayName = "";
         
-        //testing only remove the follwing line:
-        myHour = 2;
+    
 
         if(myHour >= 5 && myHour < 12){
         mySentence = "Good morning";
@@ -102,7 +102,7 @@
 
         }else{
         // alert("its not  after noon");
-        mySentence = "It's not after noon";
+        mySentence = "Good night";
         myColor = "purple";
         myPic = "night.jpg";
         }
@@ -124,11 +124,11 @@
             dayName = "Saturday";
         }
         
-      //  document.getElementById("day-text").innerHTML = dayName;//
+       document.getElementById("day-text").innerHTML = dayName;
           //adds sentence to the page
         document.getElementById("time-text").innerHTML = mySentence;
         // adds color to html
-            document.querySelector('html').style.backgroundColor = myColor;
+        document.querySelector('html').style.backgroundColor = myColor;
 
            //adds image path to pic
            myPic = "images/" + myPic;
